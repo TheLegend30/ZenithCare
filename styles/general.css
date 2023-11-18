@@ -2,7 +2,7 @@
 Font sizes (px)
  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 Spacing system (px)
- 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 108 / 128 
 
  --- COLORS
 
@@ -37,8 +37,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12.8rem;
-  padding: 4.8rem 1.6rem;
+  gap: 10.8rem;
+  padding: 4.8rem 2.4rem;
 }
 
 .logo {
@@ -81,8 +81,22 @@ body {
   padding: 1.2rem;
 }
 
+.main-nav-search::before {
+  content: "&#128269"; /* Unicode character for magnifying glass */
+  font-size: 20px; /* Adjust the font size as needed */
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right offset as needed */
+  transform: translateY(-50%);
+  cursor: pointer; /* Optional: Add a pointer cursor for better usability */
+}
+
 .heading-primary {
-  font-size: 4.8rem;
+  font-size: 4.4rem;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
 }
 
 .btn:link,
@@ -110,4 +124,10 @@ body {
 .btn--white:hover,
 .btn--white:active {
   background-color: #3e5f7f;
+}
+
+/* UTITIES */
+
+.opaque {
+  opacity: 0;
 }

@@ -31,7 +31,6 @@
 
     <link rel="stylesheet" href="/styles/general.css" />
     <link rel="stylesheet" href="/styles/index.css" />
-    <script src="/scripts/index.js"></script>
 
     <title>ZenithCare | Психологічна допомога для всіх</title>
   </head>
@@ -47,15 +46,17 @@
           <li>
             <a class="main-nav-link" href="#">Перелік клінік та спеціалістів</a>
           </li>
-          <li><a class="main-nav-link" href="#">Профіль</a></li>
+          <li><a class="main-nav-link" href="#">Увійти</a></li>
           <li>
-            <input
-              class="main-nav-search"
-              type="search"
-              name="search"
-              id="search"
-              placeholder="Пошук клініки"
-            />
+            <form action="#" class="search-form">
+              <input
+                class="main-nav-search"
+                type="search"
+                name="search"
+                id="search"
+                placeholder="&#x1F50D Пошук клініки"
+              />
+            </form>
           </li>
         </ul>
       </nav>
@@ -78,7 +79,37 @@
         <div></div>
       </section>
 
-      <section class="gallery-section"></section>
+      <section class="gallery-section">
+        <h2 class="heading-secondary">Наші партнери гарантують якість</h2>
+        <div class="gallery-carousel">
+          <img
+            class="quote-img"
+            src="/images/gallery/person1.jpg"
+            alt="Ігор Станкевич"
+          />
+          <blockquote class="gallery-quote">
+            <p class="quote-text">
+              Zenith Care - це не просто платформа, а справжнє спасіння для тих,
+              хто шукає допомогу. Раджу всім колегам приєднатися до цього
+              чудового сервісу. Разом ми можемо зробити більше!
+            </p>
+            <p class="quote-author">Ігор Станкевич, психотерапевт</p>
+          </blockquote>
+
+          <button class="gallery-button gallery-button--left">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="gallery-button gallery-button--right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+
+          <div class="dots">
+            <button class="dot dot--fill">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+          </div>
+        </div>
+      </section>
 
       <section class="popular-section"></section>
 
@@ -88,5 +119,6 @@
     </main>
 
     <footer class="footer"></footer>
+    <script src="/scripts/index.js"></script>
   </body>
 </html>

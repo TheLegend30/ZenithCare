@@ -1,4 +1,4 @@
-/* HERO SECTION*/
+/* HERO SECTION */
 
 .hero-section {
   display: grid;
@@ -9,6 +9,7 @@
   background-size: cover;
   height: 80vh;
   padding: 4.8rem;
+  margin-bottom: 6.4rem;
 
   color: #fff;
 }
@@ -17,6 +18,7 @@
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  line-height: 0.95;
 }
 
 .hero-symbol {
@@ -25,4 +27,107 @@
 
 .hero-description {
   font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/* GALLERY SECTION - Carousel */
+
+.gallery-section {
+  padding: 4.8rem;
+}
+
+.gallery-carousel {
+  width: 100rem;
+  background-color: #456a8d;
+  margin: 10rem auto;
+  padding: 3.2rem 4.8rem 3.2rem 8.6rem;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+
+.quote-img {
+  height: 28rem;
+  width: 22rem;
+  transform: scale(1.5);
+  border-radius: 11px;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.25);
+  transition: 0.3s opacity;
+}
+
+.quote-text {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+  color: #fff;
+  transition: 0.3s opacity;
+}
+
+.quote-author {
+  font-size: 1.6rem;
+  color: #ddd;
+  transition: 0.3s opacity;
+}
+
+.gallery-button {
+  background-color: #fff;
+  color: #456a8d;
+  border: none;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.gallery-button:hover {
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.25);
+}
+
+.gallery-button--left {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery-button--right {
+  right: 0;
+
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 3.2rem);
+}
+
+.dot {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #fff;
+  border: 2px solid #456a8d;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 1.2rem;
+}
+
+.dots:last-child {
+  margin-left: 0;
+}
+
+.dot--fill {
+  background-color: #456a8d;
 }
