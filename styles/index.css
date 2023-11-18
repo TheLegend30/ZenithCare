@@ -1,0 +1,28 @@
+/* HERO SECTION*/
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  background: linear-gradient(to right bottom, #456a8d6f, #456a8d6f),
+    url("/images/hero-background.jpg") center center fixed;
+
+  background-size: cover;
+  height: 80vh;
+  padding: 4.8rem;
+
+  color: #fff;
+}
+
+.hero-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.hero-symbol {
+  font-size: 6.4rem;
+}
+
+.hero-description {
+  font-size: 1.8rem;
+}

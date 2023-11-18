@@ -3,10 +3,111 @@ Font sizes (px)
  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 Spacing system (px)
  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+ --- COLORS
+
+- Primary: #456a8d
+- Tints:  
+- Shades: #3e5f7f 
+- Greys:
+
+#555
+#333
+ 
 */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #555;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12.8rem;
+  padding: 4.8rem 1.6rem;
+}
+
+.logo {
+  height: 10rem;
+}
+
+.main-nav {
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+  font-weight: 700;
+  font-size: 2.4rem;
+
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #456a8d;
+}
+
+.main-nav-search {
+  font-size: 2.4rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 1.2rem 1.2rem 2rem 1rem rgba(0, 0, 0, 0.075);
+  padding: 1.2rem;
+}
+
+.heading-primary {
+  font-size: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline;
+  align-self: start;
+
+  padding: 1.6rem 4.8rem;
+  border-radius: 9px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+.btn--white:link,
+.btn--white:visited {
+  color: #fff;
+  background-color: #456a8d;
+}
+
+.btn--white:hover,
+.btn--white:active {
+  background-color: #3e5f7f;
 }
