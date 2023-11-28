@@ -34,6 +34,7 @@
 
 .gallery-section {
   padding: 4.8rem;
+  margin-bottom: 4.8rem;
 }
 
 .gallery-carousel {
@@ -130,4 +131,179 @@
 
 .dot--fill {
   background-color: #456a8d;
+}
+
+/* POPULAR SECTION - Carousel */
+
+.popular-section {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.popular-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.change-list {
+  border: none;
+  background-color: #e8f1fc;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.075);
+  transition: 0.3s all;
+}
+
+.change-list:hover,
+.change-list:active {
+  background-color: #6298cb;
+  color: #fff;
+}
+
+.list {
+  margin: 3.2rem;
+  padding: 1.6rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  font-size: 1.8rem;
+}
+
+.list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.list th,
+.list td {
+  padding: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.list th {
+  background-color: #f2f2f2;
+}
+
+.list tr:not(:first-child):hover {
+  background-color: #e8f1fc;
+  cursor: pointer;
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials-section {
+  background-color: #e8f1fc;
+  align-items: center;
+}
+
+.testimonials-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 6.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 4.2rem;
+  column-gap: 6.4rem;
+  margin-top: 4.8rem;
+}
+
+.testimonial-img {
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+}
+
+/* CTA SECTION */
+
+.cta-section {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4.8rem 0 12.8rem;
+}
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  color: #fff;
+  border-radius: 11px;
+  background-image: linear-gradient(to left bottom, #6298cb, #456a8c);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.175);
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta .heading-secondary {
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(98, 152, 203, 0.35),
+      rgba(69, 106, 140, 0.35)
+    ),
+    url("../images/wellness.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  color: #777;
+  background-color: #e8f1fc;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #777;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(232, 241, 252, 0.5);
 }

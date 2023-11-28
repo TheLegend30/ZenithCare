@@ -35,7 +35,7 @@
     <title>ZenithCare | Психологічна допомога для всіх</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <a href="#">
         <img class="logo" src="/images/logotype.png" alt="Логотип ZenithCare" />
       </a>
@@ -54,7 +54,7 @@
                 type="search"
                 name="search"
                 id="search"
-                placeholder="&#x1F50D Пошук клініки"
+                placeholder="&#128269; Пошук клініки"
               />
             </form>
           </li>
@@ -74,7 +74,7 @@
             добробут. Ми створили цю платформу, щоб надати швидкий та простий
             доступ до якісної психотерапевтичної підтримки.
           </p>
-          <a class="btn btn--white" href="#">Подбайте про своє здоровʼя</a>
+          <a class="btn btn--white" href="#cta">Подбайте про своє здоровʼя</a>
         </div>
         <div></div>
       </section>
@@ -111,14 +111,273 @@
         </div>
       </section>
 
-      <section class="popular-section"></section>
+      <section class="popular-section">
+        <div class="popular-heading-container">
+          <h2 class="heading-secondary popular-label">Найкращі спеціалісти</h2>
+          <button class="btn change-list">Клініки</button>
+        </div>
 
-      <section class="testimonials-section"></section>
+        <div class="list">
+          <h2>Список Спеціалістів</h2>
+          <table>
+            <tr>
+              <th>ПІБ</th>
+              <th>Рейтинг</th>
+              <th>Кількість відгуків</th>
+              <th>Ціна/год</th>
+              <th>Адреса</th>
+            </tr>
+            <tr>
+              <td>Геращенко Йосип Трохимович</td>
+              <td>4.8</td>
+              <td>2000</td>
+              <td>500 грн.</td>
+              <td>м. Львів, вул. Малинова 7</td>
+            </tr>
+            <tr>
+              <td>Іванчук Симон Васильович</td>
+              <td>4.7</td>
+              <td>2600</td>
+              <td>700 грн.</td>
+              <td>м. Львів, вул. Заклинських 18</td>
+            </tr>
+            <tr>
+              <td>Лазарєва Інна Петрівна</td>
+              <td>4.9</td>
+              <td>1800</td>
+              <td>650 грн.</td>
+              <td>м. Львів, вул. Топольна 10</td>
+            </tr>
+          </table>
+        </div>
 
-      <section class="cta-section"></section>
+        <div class="list none">
+          <h2>Список Клінік</h2>
+          <table>
+            <tr>
+              <th>Назва</th>
+              <th>Рейтинг</th>
+              <th>Кількість відгуків</th>
+              <th>Адреса</th>
+            </tr>
+            <tr>
+              <td>Синергія</td>
+              <td>4.5</td>
+              <td>8000</td>
+              <td>м. Львів, вул. Тернова 29</td>
+            </tr>
+            <tr>
+              <td>Душа</td>
+              <td>4.9</td>
+              <td>3500</td>
+              <td>м. Львів, вул. Робітнича 3</td>
+            </tr>
+            <tr>
+              <td>Духовний світ</td>
+              <td>4.8</td>
+              <td>5750</td>
+              <td>м. Львів, вул. Ангарна 17</td>
+            </tr>
+            <tr>
+              <td>Гармонія-Центр</td>
+              <td>4.6</td>
+              <td>5400</td>
+              <td>м. Львів, вул. Барвінських 8</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <div class="testimonials-container">
+          <span class="subheading">Відгуки</span>
+          <h2 class="heading-secondary">Ти обовʼязково знайдеш підтримку</h2>
+
+          <div class="testimonials">
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/1.jpeg" />
+              <blockquote class="testimonial-text">
+                Завдяки Zenith Care знайшов ідеального психотерапевта, який
+                допоміг мені подолати травматичні переживання. Дуже вдячний за
+                цей сервіс!"
+              </blockquote>
+              <p class="testimonial-name">&mdash; Олександр Ковальчук</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/2.jpeg" />
+              <blockquote class="testimonial-text">
+                Сайт Zenith Care - неймовірно зручний і простий у використанні.
+                За кілька хвилин я знайшла психолога, який розуміє мої потреби.
+                Рекомендую!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Ірина Семенюк</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/4.jpeg" />
+              <blockquote class="testimonial-text">
+                Професійний підхід і турбота про клієнта - ось чому я обрала
+                Zenith Care. Допомогли впоратися з травмою, і я відчуваю
+                покращення
+              </blockquote>
+              <p class="testimonial-name">&mdash; Анна Чехова</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/3.jpeg" />
+              <blockquote class="testimonial-text">
+                Zenith Care - моя допомога в стресових ситуаціях. Швидко знайшла
+                фахівця, з яким відчуваю зв'язок. Дякую за такий важливий
+                сервіс!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Ольга Лисенко</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/5.jpeg" />
+              <blockquote class="testimonial-text">
+                Zenith Care - це точно те, що мені потрібно було для подолання
+                стресу. Вибір психолога на сайті був дуже простим, і результат
+                перевершив мої очікування.
+              </blockquote>
+              <p class="testimonial-name">&mdash; Валентин Сидоренко</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/6.jpeg" />
+              <blockquote class="testimonial-text">
+                Zenith Care - це не просто платформа, а справжнє врятовання для
+                тих, хто потребує допомоги. Знайшов психолога, який змінив моє
+                життя. Дякую за це!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Петро Горбаченко</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/8.jpeg" />
+              <blockquote class="testimonial-text">
+                Дуже задоволений роботою Zenith Care. Знайшов чудового
+                психотерапевта, з яким легко і комфортно працювати. Рекомендую
+                цей сервіс!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Андрій Мельник</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img class="testimonial-img" src="images/testimonials/7.jpeg" />
+              <blockquote class="testimonial-text">
+                Надійний і ефективний сервіс. Швидко знайішов підтримку на
+                Zenith Care. Рекомендую всім, хто шукає професійну допомогу.
+              </blockquote>
+              <p class="testimonial-name">&mdash; Сергій Козлов</p>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" id="cta">
+        <div class="cta">
+          <div class="cta-text-box">
+            <h2 class="heading-secondary">
+              Подбайте про своє здоровʼя вже зараз
+            </h2>
+            <p class="cta-text">
+              Оберіть гармонію для свого розумового благополуччя! Приєднуйтесь
+              до нашої платформи для миттєвого доступу до якісної
+              психотерапевтичної підтримки.
+            </p>
+
+            <form class="cta-form" name="sign-up" netlify>
+              <div>
+                <label for="full-name">ПІБ</label>
+                <input
+                  id="full-name"
+                  type="text"
+                  placeholder="Петренко Петро Петрович"
+                  name="full-name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="зразок@зразок.com"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="select-where">Звідки ви про нас дізналися</label>
+                <select id="select-where" name="select-where" required>
+                  <option value="">Оберіть один варіант:</option>
+                  <option value="friends">Друзі чи родина</option>
+                  <option value="colleagues">Колеги</option>
+                  <option value="podcast">Подкаст</option>
+                  <option value="ad">Реклама</option>
+                  <option value="others">Інше</option>
+                </select>
+              </div>
+
+              <button href="#cta" class="btn btn--form">
+                Надіслати заявку
+              </button>
+            </form>
+          </div>
+          <div class="cta-img-box"></div>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer-logo">
+        <a href="#header"><img src="/images/logotype.png" alt="" /></a>
+      </div>
+      <div class="footer-other">
+        <div class="footer-description">
+          <p class="text">
+            ZenithCare - платформа, що гарантує допомогу та підтримку в
+            подоланні наслідків травматичних переживань та стресових ситуацій.
+            На нашому сайті можна швидко знайти психотерапевта або психолога,
+            який відповідає вашим потребам.
+          </p>
+        </div>
+
+        <div class="footer-urls">
+          <div class="footer-urls-column">
+            <a href="#">Правила сервісу</a>
+            <a href="#">Мапа сайту</a>
+            <a href="#">Скарги</a>
+          </div>
+          <div class="footer-urls-column">
+            <a href="#">Пропозиції</a>
+            <a href="#">Про нас</a>
+            <a href="#">Контакти</a>
+          </div>
+        </div>
+
+        <div class="footer-numbers">
+          <a href="tel:+1234567890"
+            ><ion-icon name="call-outline"></ion-icon>(123) 456-7890</a
+          >
+
+          <a href="tel:+0987654321"
+            ><ion-icon name="call-outline"></ion-icon>(098) 765-4321</a
+          >
+
+          <a href="tel:+0987654322"
+            ><ion-icon name="call-outline"></ion-icon>(098) 765-4322</a
+          >
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy;Всі права збережені</p>
+      </div>
+    </footer>
     <script src="/scripts/index.js"></script>
   </body>
 </html>

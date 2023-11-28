@@ -63,3 +63,25 @@ dotsEls.forEach((cur, key) =>
     changeCarousel();
   })
 );
+
+// Event to change list (from specialists to clinics and vice versa)
+const changeListEl = document.querySelector(".change-list");
+const popularLabelEl = document.querySelector(".popular-label");
+// TODO: Change names for .lists in html
+const listEls = document.querySelectorAll(".list");
+
+changeListEl.addEventListener("click", () => {
+  listEls.forEach((val) => {
+    val.classList.contains("none")
+      ? val.classList.remove("none")
+      : val.classList.add("none");
+  });
+
+  popularLabelEl.textContent =
+    popularLabelEl.textContent === "Найкращі спеціалісти"
+      ? "Найкращі клініки"
+      : "Найкращі спеціалісти";
+
+  changeListEl.textContent =
+    changeListEl.textContent === "Спеціалісти" ? "Клініки" : "Спеціалісти";
+});
