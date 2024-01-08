@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   background: linear-gradient(to right bottom, #456a8d6f, #456a8d6f),
-    url("/images/hero-background.jpg") center center fixed;
+    url("/images/hero-background.webp") center center fixed;
 
   background-size: cover;
   height: 80vh;
@@ -267,7 +267,7 @@
       rgba(98, 152, 203, 0.35),
       rgba(69, 106, 140, 0.35)
     ),
-    url("../images/wellness.jpg");
+    url("../images/wellness.webp");
   background-size: cover;
   background-position: center;
 }

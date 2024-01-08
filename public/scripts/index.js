@@ -32,7 +32,7 @@ const changeCarousel = function () {
   setTimeout(() => {
     quoteTextEl.textContent = [...quotes.values()][currentPersonGallery];
     quoteAuthorEl.textContent = [...quotes.keys()][currentPersonGallery];
-    imgGalleryEl.src = `/images/gallery/person${currentPersonGallery + 1}.jpg`;
+    imgGalleryEl.src = `/images/gallery/person${currentPersonGallery + 1}.webp`;
 
     imgGalleryEl.classList.remove("opaque");
     quoteTextEl.classList.remove("opaque");
