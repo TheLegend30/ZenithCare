@@ -1,10 +1,7 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
   "hosting": {
-    "site": "zenithcare",
-    "public": "public",
+    "public": "dist",
+    "site": "zenith-care",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }

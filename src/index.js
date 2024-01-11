@@ -1,3 +1,27 @@
+import { initializeApp } from "firebase/app";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA5ejPOJBuBbuTS4mIHYW5_KyC1iu_ezzw",
+  authDomain: "zenithcare-e9c23.firebaseapp.com",
+  projectId: "zenithcare-e9c23",
+  storageBucket: "zenithcare-e9c23.appspot.com",
+  messagingSenderId: "333755327283",
+  appId: "1:333755327283:web:5957812ce8f36e17db5446",
+};
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+  if (user != null) {
+    console.log("logged in!");
+  } else {
+    console.log("No user");
+  }
+});
+
 let currentPersonGallery = 0;
 const quotes = new Map();
 quotes.set(
