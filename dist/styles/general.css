@@ -39,8 +39,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10.8rem;
-  padding: 4.8rem 2.4rem;
+  gap: 12.8rem;
+  padding: 1.6rem 1.2rem;
 }
 
 .logo {
@@ -55,7 +55,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 4.8rem;
+  gap: 8rem;
 }
 
 .main-nav-link:link,

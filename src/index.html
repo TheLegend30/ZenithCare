@@ -40,11 +40,24 @@
         <img class="logo" src="/images/logotype.png" alt="Логотип ZenithCare" />
       </a>
 
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Попередження</h2>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Текст попередження</p>
+          </div>
+        </div>
+      </div>
+
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Головна</a></li>
           <li>
-            <a class="main-nav-link" href="#">Перелік клінік</a>
+            <a class="main-nav-link main-nav-link-clinics" href="#"
+              >Перелік клінік</a
+            >
           </li>
           <li>
             <a
@@ -67,6 +80,18 @@
         </ul>
       </nav>
     </header>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Попередження</h2>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">Текст попередження</p>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section class="hero-section">
@@ -173,7 +198,7 @@
               <td>м. Львів, вул. Тернова 29</td>
             </tr>
             <tr>
-              <td>Душа</td>
+              <td>Rozum Clinic</td>
               <td>4.9</td>
               <td>3500</td>
               <td>м. Львів, вул. Робітнича 3</td>
@@ -320,7 +345,7 @@
               <div>
                 <label for="select-where">Звідки ви про нас дізналися</label>
                 <select id="select-where" name="select-where" required>
-                  <option value="">Оберіть один варіант:</option>
+                  <option value="">Оберіть один варіант</option>
                   <option value="friends">Друзі чи родина</option>
                   <option value="colleagues">Колеги</option>
                   <option value="podcast">Подкаст</option>
@@ -357,7 +382,7 @@
           <div class="footer-urls-column">
             <a href="#">Правила сервісу</a>
             <a href="#">Мапа сайту</a>
-            <a href="#">Скарги</a>
+            <a href="mailto:zenithcare@lmail.com">Скарги</a>
           </div>
           <div class="footer-urls-column">
             <a href="#">Пропозиції</a>
@@ -381,7 +406,7 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <p>&copy;Всі права збережені</p>
+        <p class="footer-copyright-text">&copy;Всі права збережені</p>
       </div>
     </footer>
   </body>

@@ -1,4 +1,5 @@
 import { onAuthStateChanged } from "firebase/auth";
+import { doc } from "firebase/firestore";
 
 let currentPersonGallery = 0;
 const quotes = new Map();
@@ -24,6 +25,11 @@ const rightButtonGalleryEl = document.querySelector(".gallery-button--right");
 const leftButtonGalleryEl = document.querySelector(".gallery-button--left");
 const dotsEls = document.querySelectorAll(".dot");
 const mainNavLinkEnterEl = document.querySelector(".main-nav-link-enter");
+const mainNavLinkClinicsEl = document.querySelector(".main-nav-link-clinics");
+const footerCopyrightTextEl = document.querySelector(".footer-copyright-text");
+const searchFormEl = document.querySelector(".search-form");
+
+footerCopyrightTextEl.textContent = `\u00A9 Copyright ${new Date().getFullYear()}. Всі права збережені`;
 
 const changeCarousel = function () {
   dotsEls.forEach((cur) => cur.classList.remove("dot--fill"));
@@ -99,14 +105,43 @@ changeListEl.addEventListener("click", () => {
 //   }
 // });
 
+// MODAL CONFIGURATION
+const modalEl = document.getElementById("myModal");
+const modalSpanEl = document.getElementsByClassName("close")[0];
+const modalTextEl = document.querySelector(".modal-text");
+
+const showAlertWindow = function (message) {
+  modalTextEl.innerHTML = message;
+  modalEl.style.display = "block";
+};
+
+modalSpanEl.onclick = function () {
+  modalEl.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modalEl) {
+    modalEl.style.display = "none";
+  }
+};
+
 if (localStorage.getItem("entered") === "true") {
   mainNavLinkEnterEl.innerHTML = "Вийти";
   mainNavLinkEnterEl.addEventListener("click", function (e) {
     e.preventDefault();
-    window.location.reload();
+    window.location.href = "./index.html";
     localStorage.removeItem("entered");
+  });
+
+  mainNavLinkClinicsEl.addEventListener("click", function () {
+    window.location.href = "./clinics.html";
   });
 } else {
   mainNavLinkEnterEl.innerHTML = "Увійти";
-  mainNavLinkEnterEl.removeEventListener("click");
+
+  mainNavLinkClinicsEl.addEventListener("click", function () {
+    showAlertWindow(
+      "Цю сторінку можуть переглядати лише зареєстровані користувачі. Будь-ласка зайдіть у свій акаунт чи зареєеструйтеся на сайті!"
+    );
+  });
 }

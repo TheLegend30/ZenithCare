@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: "/src/index.js",
     authorization: "/src/authorization.js",
+    clinics: "/src/clinics.js",
   },
 
   output: {
@@ -24,6 +25,11 @@ module.exports = {
       filename: "authorization.html",
       template: "src/authorization.html",
       chunks: ["authorization"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "clinics.html",
+      template: "src/clinics.html",
+      chunks: ["clinics"],
     }),
   ],
 };
