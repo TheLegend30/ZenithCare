@@ -1,15 +1,29 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  // The entry point file described above
   mode: "development",
-  entry: "./src/index.js",
-  // The location of the build folder described above
+  devtool: "eval-source-map",
+  entry: {
+    index: "/src/index.js",
+    authorization: "/src/authorization.js",
+  },
+
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].js",
   },
-  // Optional and for development only. This provides the ability to
-  // map the built code back to the original source format when debugging.
-  devtool: "eval-source-map",
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "src/index.html",
+      chunks: ["index"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "authorization.html",
+      template: "src/authorization.html",
+      chunks: ["authorization"],
+    }),
+  ],
 };

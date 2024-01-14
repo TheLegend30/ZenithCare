@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   display: flex;
@@ -35,7 +35,7 @@ input {
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .form-group label {
@@ -61,8 +61,51 @@ input {
   border-radius: 3px;
   cursor: pointer;
   font-size: 1.8rem;
+  text-decoration: none;
 }
 
 .form-group button:hover {
+  background-color: #3e5f7f;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.suc-err-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+
+.suc-err-text {
+  font-size: 1.4rem;
+  color: #666;
+  padding-bottom: 0.6rem;
+}
+
+.suc-err-button:link,
+.suc-err-button:visited {
+  text-decoration: none;
+  background-color: #456a8d;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.suc-err-button:hover,
+.suc-err-button:active {
   background-color: #3e5f7f;
 }

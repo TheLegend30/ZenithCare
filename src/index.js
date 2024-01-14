@@ -1,26 +1,4 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyA5ejPOJBuBbuTS4mIHYW5_KyC1iu_ezzw",
-  authDomain: "zenithcare-e9c23.firebaseapp.com",
-  projectId: "zenithcare-e9c23",
-  storageBucket: "zenithcare-e9c23.appspot.com",
-  messagingSenderId: "333755327283",
-  appId: "1:333755327283:web:5957812ce8f36e17db5446",
-};
-
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-
-onAuthStateChanged(auth, (user) => {
-  if (user != null) {
-    console.log("logged in!");
-  } else {
-    console.log("No user");
-  }
-});
+import { onAuthStateChanged } from "firebase/auth";
 
 let currentPersonGallery = 0;
 const quotes = new Map();
@@ -45,6 +23,7 @@ const imgGalleryEl = document.querySelector(".quote-img");
 const rightButtonGalleryEl = document.querySelector(".gallery-button--right");
 const leftButtonGalleryEl = document.querySelector(".gallery-button--left");
 const dotsEls = document.querySelectorAll(".dot");
+const mainNavLinkEnterEl = document.querySelector(".main-nav-link-enter");
 
 const changeCarousel = function () {
   dotsEls.forEach((cur) => cur.classList.remove("dot--fill"));
@@ -109,3 +88,25 @@ changeListEl.addEventListener("click", () => {
   changeListEl.textContent =
     changeListEl.textContent === "Спеціалісти" ? "Клініки" : "Спеціалісти";
 });
+
+// onAuthStateChanged(auth, (user) => {
+//   if (user) {
+//     mainNavLinkEnterEl.textContent = "Вийти";
+//     console.log("user");
+//   } else {
+//     mainNavLinkEnterEl.textContent = "Увійти";
+//     console.log("no user");
+//   }
+// });
+
+if (localStorage.getItem("entered") === "true") {
+  mainNavLinkEnterEl.innerHTML = "Вийти";
+  mainNavLinkEnterEl.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.reload();
+    localStorage.removeItem("entered");
+  });
+} else {
+  mainNavLinkEnterEl.innerHTML = "Увійти";
+  mainNavLinkEnterEl.removeEventListener("click");
+}
