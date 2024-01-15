@@ -49,7 +49,7 @@ const createAccount = async function (auth, email, password) {
         case "auth/operation-not-allowed":
         case "auth/weak-password":
         default:
-          throw "Error";
+          throw new Error("Error");
       }
     });
 };
@@ -64,13 +64,14 @@ const signInAccount = async function (auth, email, password) {
         case "auth/invalid-provider-id":
         case "auth/invalid-email":
         default:
-          throw "Error";
+          throw new Error("Error");
       }
     });
 };
 
 const checkIfLogged = function (auth, success) {
   onAuthStateChanged(auth, (user) => {
+    console.log(success);
     if (success) {
       sucErrButtonEl.href = "index.html";
       sucErrTextEl.textContent = `Ви успішно ${
@@ -96,16 +97,20 @@ const authenticate = async function (e) {
   let password = passwordEl.value;
 
   if (enterRadioEl.checked) {
-    await signInAccount(auth, email, password).catch(
-      checkIfLogged(auth, false)
-    );
-
+    try {
+      await signInAccount(auth, email, password);
+    } catch (e) {
+      checkIfLogged(auth, false);
+      return;
+    }
     checkIfLogged(auth, true);
   } else {
-    await createAccount(auth, email, password).catch(
-      checkIfLogged(auth, false)
-    );
-
+    try {
+      await createAccount(auth, email, password);
+    } catch (e) {
+      checkIfLogged(auth, false);
+      return;
+    }
     checkIfLogged(auth, true);
   }
 };
