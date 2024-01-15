@@ -5,7 +5,6 @@ import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs, doc } from "firebase/firestore";
 
 let filter = localStorage.getItem("filter") ?? "";
-console.log(filter);
 
 const firebaseConfig = {
   apiKey: "AIzaSyA5ejPOJBuBbuTS4mIHYW5_KyC1iu_ezzw",
