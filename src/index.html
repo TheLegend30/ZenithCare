@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Zenith Care - надійна платформа для тих, хто шукає підтримку та допомогу в подоланні наслідків травматичних переживань та стресових ситуацій. Наш сайт дозволяє швидко і легко знайти психотерапевта або психолога, який відповідає вашим потребам та побажанням.
+      content="ZenithCare - надійна платформа для тих, хто шукає підтримку та допомогу в подоланні наслідків травматичних переживань та стресових ситуацій. Наш сайт дозволяє швидко і легко знайти психотерапевта або психолога, який відповідає вашим потребам та побажанням.
     "
     />
     <link
@@ -35,63 +35,7 @@
     <title>ZenithCare | Психологічна допомога для всіх</title>
   </head>
   <body>
-    <header class="header" id="header">
-      <a href="#">
-        <img class="logo" src="/images/logotype.png" alt="Логотип ZenithCare" />
-      </a>
-
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Попередження</h2>
-          </div>
-          <div class="modal-body">
-            <p class="modal-text">Текст попередження</p>
-          </div>
-        </div>
-      </div>
-
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li>
-            <a class="main-nav-link main-nav-link-clinics" href="#"
-              >Перелік клінік</a
-            >
-          </li>
-          <li>
-            <a
-              class="main-nav-link main-nav-link-enter"
-              href="/authorization.html"
-              >Увійти</a
-            >
-          </li>
-          <li>
-            <form action="#" class="search-form">
-              <input
-                class="main-nav-search"
-                type="search"
-                name="search"
-                id="search"
-                placeholder="&#128269; Пошук клініки"
-              />
-            </form>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2>Попередження</h2>
-        </div>
-        <div class="modal-body">
-          <p class="modal-text">Текст попередження</p>
-        </div>
-      </div>
-    </div>
+    <div w3-include-html="./header.html"></div>
 
     <main>
       <section class="hero-section">
@@ -193,7 +137,7 @@
             </tr>
             <tr>
               <td>Синергія</td>
-              <td>4.5</td>
+              <td>4.4</td>
               <td>8000</td>
               <td>м. Львів, вул. Тернова 29</td>
             </tr>
@@ -364,50 +308,6 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer-logo">
-        <a href="#header"><img src="/images/logotype.png" alt="" /></a>
-      </div>
-      <div class="footer-other">
-        <div class="footer-description">
-          <p class="text">
-            ZenithCare - платформа, що гарантує допомогу та підтримку в
-            подоланні наслідків травматичних переживань та стресових ситуацій.
-            На нашому сайті можна швидко знайти психотерапевта або психолога,
-            який відповідає вашим потребам.
-          </p>
-        </div>
-
-        <div class="footer-urls">
-          <div class="footer-urls-column">
-            <a href="#">Правила сервісу</a>
-            <a href="#">Мапа сайту</a>
-            <a href="mailto:zenithcare@lmail.com">Скарги</a>
-          </div>
-          <div class="footer-urls-column">
-            <a href="#">Пропозиції</a>
-            <a href="#">Про нас</a>
-            <a href="#">Контакти</a>
-          </div>
-        </div>
-
-        <div class="footer-numbers">
-          <a href="tel:+1234567890"
-            ><ion-icon name="call-outline"></ion-icon>(123) 456-7890</a
-          >
-
-          <a href="tel:+0987654321"
-            ><ion-icon name="call-outline"></ion-icon>(098) 765-4321</a
-          >
-
-          <a href="tel:+0987654322"
-            ><ion-icon name="call-outline"></ion-icon>(098) 765-4322</a
-          >
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <p class="footer-copyright-text">&copy;Всі права збережені</p>
-      </div>
-    </footer>
+    <div w3-include-html="./footer.html"></div>
   </body>
 </html>

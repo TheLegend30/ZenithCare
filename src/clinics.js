@@ -2,7 +2,7 @@ if (localStorage.getItem("entered") !== "true")
   window.location.href = "index.html";
 
 import { initializeApp } from "firebase/app";
-import { collection, getFirestore, getDocs } from "firebase/firestore";
+import { collection, getFirestore, getDocs, doc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA5ejPOJBuBbuTS4mIHYW5_KyC1iu_ezzw",
@@ -26,10 +26,12 @@ const readAllData = function () {
   });
 };
 
+const clinicContentEl = document.querySelector(".clinic-content");
+
 const putClinicsOnPage = function () {
   querySnapshot.forEach((doc) => {
     let data = doc.data();
-    document.body.innerHTML += `
+    clinicContentEl.innerHTML += `
     <div class="clinic-section">
 <div class="clinic">
   <div class="clinic-main">
@@ -48,6 +50,30 @@ const putClinicsOnPage = function () {
       ).toLocaleDateString()}</span>
       <span class="clinic-email">Електрона пошта: ${data.email}</span>
       <span class="clinic-phone">Номер телефону: ${data.phone}</span>
+
+      <div class="clinic-rating-container">
+      <div class="clinic-rating">
+        <span class="clinic-rating-average">Рейтинг: ${data.avg_rating}</span>
+        <span class="clinic-rating-count">(${data.count_rating})</span>
+      </div>
+      <div class="clinic-stars">
+        <span class="fa fa-star ${
+          data.avg_rating > 1.0 ? "checked" : ""
+        }"></span>
+        <span class="fa fa-star ${
+          data.avg_rating > 2.0 ? "checked" : ""
+        }"></span>
+        <span class="fa fa-star ${
+          data.avg_rating > 3.0 ? "checked" : ""
+        }"></span>
+        <span class="fa fa-star ${
+          data.avg_rating > 4.0 ? "checked" : ""
+        }"></span>
+        <span class="fa fa-star ${
+          data.avg_rating > 4.5 ? "checked" : ""
+        }"></span>
+      </div>
+    </div> 
     </div>
   </div>
   <div class="clinic-footer">

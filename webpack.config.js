@@ -8,6 +8,7 @@ module.exports = {
     index: "/src/index.js",
     authorization: "/src/authorization.js",
     clinics: "/src/clinics.js",
+    include: "/src/include.js",
   },
 
   output: {
@@ -19,7 +20,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html",
-      chunks: ["index"],
+      chunks: ["index", "include"],
     }),
     new HtmlWebpackPlugin({
       filename: "authorization.html",
@@ -27,9 +28,22 @@ module.exports = {
       chunks: ["authorization"],
     }),
     new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: "src/about.html",
+      chunks: ["include"],
+    }),
+    new HtmlWebpackPlugin({
       filename: "clinics.html",
       template: "src/clinics.html",
-      chunks: ["clinics"],
+      chunks: ["clinics", "include"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "header.html",
+      template: "src/header.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "footer.html",
+      template: "src/footer.html",
     }),
   ],
 };
