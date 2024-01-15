@@ -57,6 +57,11 @@ module.exports = {
       chunks: ["include"],
     }),
     new HtmlWebpackPlugin({
+      filename: "confidentiality.html",
+      template: "src/confidentiality.html",
+      chunks: ["include"],
+    }),
+    new HtmlWebpackPlugin({
       filename: "footer.html",
       template: "src/footer.html",
     }),

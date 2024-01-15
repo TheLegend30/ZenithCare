@@ -1,6 +1,6 @@
 {
   "name": "zenithcare",
-  "version": "0.1",
+  "version": "0.8",
   "description": "Website for psychological support",
   "main": "index.js",
   "scripts": {
