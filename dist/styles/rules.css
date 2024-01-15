@@ -1,0 +1,46 @@
+.rules-section {
+  margin: 0 auto;
+  margin-top: 3.6rem;
+  margin-bottom: 6.4rem;
+}
+
+.rules-section h2 {
+  font-size: 4.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.rules-section h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.rules-section {
+  font-size: 2rem;
+}
+
+.rules-container {
+  margin-bottom: 3.2rem;
+  line-height: 1.4;
+  padding: 0 9.6rem;
+}
+
+.rules-container:last-child {
+  margin-top: 8rem;
+}
+
+.rules-last-p {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}

@@ -52,6 +52,11 @@ module.exports = {
       chunks: ["include"],
     }),
     new HtmlWebpackPlugin({
+      filename: "rules.html",
+      template: "src/rules.html",
+      chunks: ["include"],
+    }),
+    new HtmlWebpackPlugin({
       filename: "footer.html",
       template: "src/footer.html",
     }),
