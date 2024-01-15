@@ -1,0 +1,53 @@
+.partner-section {
+  margin: 0 auto;
+  margin-top: 3.6rem;
+  margin-bottom: 6.4rem;
+}
+
+.partner-section h2 {
+  font-size: 4.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.partner-section h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.partner-section {
+  font-size: 2rem;
+}
+
+.partner-container {
+  margin-bottom: 3.2rem;
+  line-height: 1.4;
+  padding: 0 9.6rem;
+}
+
+.partner-container a:link,
+.partner-container a:visited {
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+.partner-container a:hover,
+.partner-container a:active {
+  color: #6298cb;
+}
+
+.partner-container:last-child {
+  margin-top: 8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
