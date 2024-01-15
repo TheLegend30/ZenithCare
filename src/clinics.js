@@ -4,6 +4,9 @@ if (localStorage.getItem("entered") !== "true")
 import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs, doc } from "firebase/firestore";
 
+let filter = localStorage.getItem("filter") ?? "";
+console.log(filter);
+
 const firebaseConfig = {
   apiKey: "AIzaSyA5ejPOJBuBbuTS4mIHYW5_KyC1iu_ezzw",
   authDomain: "zenithcare-e9c23.firebaseapp.com",
@@ -28,10 +31,11 @@ const readAllData = function () {
 
 const clinicContentEl = document.querySelector(".clinic-content");
 
-const putClinicsOnPage = function () {
+const putClinicsOnPage = function (filter = "") {
   querySnapshot.forEach((doc) => {
     let data = doc.data();
-    clinicContentEl.innerHTML += `
+    if (data.username.toLowerCase().includes(filter.toLowerCase()))
+      clinicContentEl.innerHTML += `
     <div class="clinic-section">
 <div class="clinic">
   <div class="clinic-main">
@@ -83,6 +87,10 @@ const putClinicsOnPage = function () {
 </div>
     `;
   });
+  if (clinicContentEl.innerHTML === "") {
+    clinicContentEl.innerHTML += `<p>Вибачте, але ми нічого не змогли знайти по вашому запиту!</p>`;
+  }
+  localStorage.removeItem("filter");
 };
 
-putClinicsOnPage();
+putClinicsOnPage(filter);

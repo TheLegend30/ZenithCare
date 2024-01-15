@@ -88,3 +88,11 @@ span {
 .checked {
   color: #6298cb;
 }
+
+.clinic-content p {
+  padding: 12.8rem;
+  display: block;
+  font-weight: 600;
+  font-size: 2.8rem;
+  text-align: center;
+}

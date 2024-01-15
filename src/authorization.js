@@ -71,7 +71,6 @@ const signInAccount = async function (auth, email, password) {
 
 const checkIfLogged = function (auth, success) {
   onAuthStateChanged(auth, (user) => {
-    console.log(success);
     if (success) {
       sucErrButtonEl.href = "index.html";
       sucErrTextEl.textContent = `Ви успішно ${

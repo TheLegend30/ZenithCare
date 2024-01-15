@@ -1,3 +1,5 @@
+let filter = "";
+
 const includeHTML = function () {
   var z, i, elmnt, file, xhttp;
   /* Loop through a collection of all HTML elements: */
@@ -55,7 +57,7 @@ const includeHTML = function () {
   };
 
   if (localStorage.getItem("entered") === "true") {
-    mainNavLinkEnterEl.innerHTML = "Вийти";
+    mainNavLinkEnterEl.innerHTML = "ВИЙТИ";
     mainNavLinkEnterEl.addEventListener("click", function (e) {
       e.preventDefault();
       window.location.href = "./index.html";
@@ -66,7 +68,7 @@ const includeHTML = function () {
       window.location.href = "./clinics.html";
     });
   } else {
-    mainNavLinkEnterEl.innerHTML = "Увійти";
+    mainNavLinkEnterEl.innerHTML = "УВІЙТИ";
 
     mainNavLinkClinicsEl.addEventListener("click", function () {
       showAlertWindow(
@@ -74,6 +76,13 @@ const includeHTML = function () {
       );
     });
   }
+
+  searchFormEl.addEventListener("submit", function (e) {
+    e.preventDefault();
+    filter = searchFormEl[0].value;
+    localStorage.setItem("filter", filter);
+    mainNavLinkClinicsEl.click();
+  });
 
   // Footer
   const footerCopyrightTextEl = document.querySelector(
