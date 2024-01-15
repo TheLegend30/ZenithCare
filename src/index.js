@@ -29,11 +29,14 @@ const changeCarousel = function () {
   imgGalleryEl.classList.add("opaque");
   quoteTextEl.classList.add("opaque");
   quoteAuthorEl.classList.add("opaque");
+
   setTimeout(() => {
+    imgGalleryEl.src = `/images/gallery/person${currentPersonGallery + 1}.webp`;
     quoteTextEl.textContent = [...quotes.values()][currentPersonGallery];
     quoteAuthorEl.textContent = [...quotes.keys()][currentPersonGallery];
-    imgGalleryEl.src = `/images/gallery/person${currentPersonGallery + 1}.webp`;
+  }, 250);
 
+  setTimeout(() => {
     imgGalleryEl.classList.remove("opaque");
     quoteTextEl.classList.remove("opaque");
     quoteAuthorEl.classList.remove("opaque");
