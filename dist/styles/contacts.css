@@ -1,0 +1,73 @@
+.contacts-section {
+  margin: 0 auto;
+  margin-top: 3.6rem;
+  margin-bottom: 6.4rem;
+}
+
+.contacts-section h2 {
+  font-size: 4.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.contacts-section h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contacts-section {
+  font-size: 2.4rem;
+}
+
+.contacts-container {
+  margin-bottom: 3.2rem;
+  line-height: 1.4;
+  padding: 0 9.6rem;
+}
+
+.contacts-container a:link,
+.contacts-container a:visited {
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+.contacts-container a:hover,
+.contacts-container a:active {
+  color: #6298cb;
+}
+
+.contacts-container:last-child {
+  margin-top: 8rem;
+}
+
+.contacts-container span {
+  font-weight: 600;
+}
+
+.contacts-container-social {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+li ion-icon {
+  color: #555;
+  transition: 0.3s all;
+  font-size: 6.4rem;
+}
+
+li ion-icon:hover {
+  color: #6298cb;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
