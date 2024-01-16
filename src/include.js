@@ -71,10 +71,10 @@ const includeHTML = function () {
     mainNavLinkEnterEl.innerHTML = "УВІЙТИ";
 
     mainNavLinkClinicsEl.addEventListener("click", function () {
+      localStorage.removeItem("filter");
       showAlertWindow(
         "Цю сторінку можуть переглядати лише зареєстровані користувачі. Будь-ласка зайдіть у свій акаунт чи зареєеструйтеся на сайті!"
       );
-      localStorage.removeItem("filter");
     });
   }
 
