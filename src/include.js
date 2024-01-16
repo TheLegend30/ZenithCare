@@ -75,6 +75,7 @@ const includeHTML = function () {
         "Цю сторінку можуть переглядати лише зареєстровані користувачі. Будь-ласка зайдіть у свій акаунт чи зареєеструйтеся на сайті!"
       );
     });
+    localStorage.removeItem("filter");
   }
 
   searchFormEl.addEventListener("submit", function (e) {
